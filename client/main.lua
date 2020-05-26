@@ -401,7 +401,7 @@ CreateThread(function()
 	while true do
 		Wait(0)
 
-		if IsControlJustReleased(0, 289) then
+		if Config.EnableInventory and IsControlJustReleased(0, 289) then
 			if IsInputDisabled(0) and not isDead and not ESX.UI.Menu.IsOpen('default', 'es_extended', 'inventory') then
 				ESX.ShowInventory()
 			end
